@@ -4,17 +4,22 @@ import Page from './pages'
 import './assets/css/main.css'
 import { connect } from 'react-redux'
 import { initGA, logEvent, pageView } from './util/analytics/ga'
+import { try_login } from './store/actions/userAction'
 
 function App(props) {
 
   useEffect(()=>{
     initGA()
     pageView()
-  })
+    props.try_login()
+  }, [])
+
 
   if (!props.user.isLogin){
+
     logEvent("appPage", "not login")
     window.location.href = "https://kaptuer.com";
+    
   }
 
   return (
@@ -31,4 +36,9 @@ const mapStateToProps = state => ({
   user: state.user
 })
 
-export default connect(mapStateToProps, null)(App);
+const mapDispatchToProps = {
+  try_login
+}
+
+
+export default connect(mapStateToProps, mapDispatchToProps)(App);
