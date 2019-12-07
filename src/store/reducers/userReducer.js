@@ -1,4 +1,4 @@
-import { LOGOUT } from '../types'
+import { LOGIN , LOGOUT } from '../types'
 import Authization from '../../util/api/libs/jwtStorage'
 
 const initialState = {
@@ -12,6 +12,11 @@ const initialState = {
 export default function (state = initialState, action) {
 
   switch (action.type) {
+    case LOGIN:
+      return {
+        ...state,
+        isLogin: true,
+      }
     case LOGOUT:
       return {
         ...state,

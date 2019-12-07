@@ -1,4 +1,4 @@
-const DOMAIN = process.env.DOMAIN || ".kaptuer.com"
+const DOMAIN = process.env.DOMAIN || "localhost"
 
 export default {
 
