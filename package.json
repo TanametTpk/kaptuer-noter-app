@@ -1,0 +1,51 @@
+{
+  "name": "noter",
+  "version": "0.1.0",
+  "homepage": "https://noter.kaptuer.com",
+  "private": true,
+  "dependencies": {
+    "@microlink/react": "^4.4.7",
+    "axios": "^0.19.0",
+    "gh-pages": "^2.1.1",
+    "lodash": "^4.17.15",
+    "react": "^16.9.0",
+    "react-contextmenu": "^2.13.0",
+    "react-dom": "^16.9.0",
+    "react-facebook-login": "^4.1.1",
+    "react-ga": "^2.7.0",
+    "react-modal": "^3.10.1",
+    "react-redux": "^7.1.1",
+    "react-router-dom": "^5.0.1",
+    "react-scripts": "3.1.1",
+    "react-tiny-link": "^2.0.1",
+    "redux": "^4.0.4",
+    "redux-persist": "^6.0.0",
+    "redux-thunk": "^2.3.0",
+    "styled-components": "^4.4.1",
+    "universal-cookie": "^4.0.2"
+  },
+  "scripts": {
+    "dev": "chmod +x ./env.sh && ./env.sh && cp env-config.js ./public/ && react-scripts start",
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
+}
