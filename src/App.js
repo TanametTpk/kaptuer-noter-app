@@ -14,14 +14,6 @@ function App(props) {
     props.try_login()
   }, [])
 
-
-  if (!props.user.isLogin){
-
-    logEvent("appPage", "not login")
-    window.location.href = "https://kaptuer.com";
-    
-  }
-
   return (
     <div className="App">
       <Router>
